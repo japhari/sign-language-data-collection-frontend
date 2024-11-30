@@ -1,0 +1,26 @@
+<div class="preview-container">
+  <h3>Preview Your Video</h3>
+
+  <!-- Debugging: Show sanitizedVideoUrl -->
+  <p *ngIf="sanitizedVideoUrl">Sanitized Video URL: {{ sanitizedVideoUrl }}</p>
+
+  <!-- Video Preview -->
+  <video controls [src]="sanitizedVideoUrl" *ngIf="sanitizedVideoUrl"></video>
+
+  <!-- Submit Button -->
+  <div class="actions" *ngIf="sanitizedVideoUrl">
+    <button (click)="submitVideo()" class="btn btn-success">
+      Submit Video
+    </button>
+  </div>
+
+  <!-- Status Messages -->
+  <p
+    [ngClass]="{
+      success: statusMessage.includes('successfully'),
+      error: statusMessage.includes('Failed')
+    }"
+  >
+    {{ statusMessage }}
+  </p>
+</div>

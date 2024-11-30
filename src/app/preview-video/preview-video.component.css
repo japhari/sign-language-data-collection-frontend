@@ -1,0 +1,29 @@
+.preview-container {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: 20px;
+}
